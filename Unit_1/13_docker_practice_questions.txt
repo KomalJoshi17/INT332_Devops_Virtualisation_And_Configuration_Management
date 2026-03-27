@@ -1,3 +1,5 @@
+Questions With Answers --->
+
 7. Task 1 – Resource Mismanagement in Containers
 Q1. Which container feature was misconfigured or missing?
 
