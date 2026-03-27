@@ -1,0 +1,54 @@
+7. Task 1 – Resource Mismanagement in Containers
+Q1. Which container feature was misconfigured or missing?
+
+👉 Answer: cgroups (memory limits not set)
+
+docker run -d --name app_container nginx
+
+❌ Above command has no memory limit, so container can consume unlimited RAM.
+
+Q2. Which kernel mechanism should have prevented this?
+
+👉 Answer: cgroups (memory control)
+
+docker run -d \
+  --memory="512m" \
+  --memory-swap="512m" \
+  --name app_container \
+  nginx
+
+✔ This ensures:
+
+Max memory = 512MB
+Container cannot exceed limit
+Q3. Would namespaces alone solve this issue? Why?
+
+👉 Answer: NO
+
+# Namespaces provide isolation only (example)
+docker run -d --name isolated_container nginx
+
+❌ Namespaces only:
+
+Isolate processes
+Do NOT limit resource usage
+
+✔ Resource control requires cgroups
+
+Final Summary Commands
+# Wrong (no limits)
+docker run -d nginx
+
+# Correct (with cgroups limits)
+docker run -d --memory="512m" nginx
+Conclusion
+Missing feature → cgroups configuration
+Required mechanism → cgroups (memory limits)
+Namespaces alone → Not sufficient (only isolation, no control)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
