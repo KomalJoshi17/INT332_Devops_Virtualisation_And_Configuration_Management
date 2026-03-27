@@ -52,3 +52,55 @@ Namespaces alone → Not sufficient (only isolation, no control)
 
 
 
+8. Task 2 – Container Resource & Isolation
+Q1. Which Linux feature prevents Container A from consuming all CPU?
+
+👉 Answer: cgroups (CPU control)
+
+docker run -d \
+  --cpus="1.0" \
+  --name containerA \
+  ubuntu
+
+✔ Limits CPU usage so one container cannot consume all CPU resources
+
+Q2. Which feature ensures Container B cannot see processes of Container C?
+
+👉 Answer: PID Namespace
+
+docker run -d \
+  --name containerB \
+  ubuntu
+
+✔ Each container gets its own process space
+✔ Processes are isolated and not visible across containers
+
+Q3. Which namespace allows all three containers to use port 80 internally?
+
+👉 Answer: Network Namespace
+
+# Container A
+docker run -d -p 8081:80 nginx
+
+# Container B
+docker run -d -p 8082:80 nginx
+
+# Container C
+docker run -d -p 8083:80 nginx
+
+✔ Internally all containers use port 80
+✔ Each container has its own network stack and IP
+
+Final Summary
+# CPU control → cgroups
+docker run -d --cpus="1.0" ubuntu
+
+# Process isolation → PID namespace
+docker run -d ubuntu
+
+# Network isolation → Network namespace
+docker run -d -p 8080:80 nginx
+Conclusion
+CPU control → cgroups
+Process isolation → PID namespace
+Same port usage → Network namespace
