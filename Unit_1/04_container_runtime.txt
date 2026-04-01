@@ -2,7 +2,7 @@ Container Runtime ->
 1. A container runtime is the software responsible for creating, starting, stopping, and managing containers on a host system.
 2. It acts as the execution engine that converts a container image into a running container.
 
-👉 In simple words:
+In simple words:
 “Container runtime is what actually runs containers.”
 
 Container Image vs Container Runtime ->

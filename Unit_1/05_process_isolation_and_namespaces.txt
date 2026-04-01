@@ -34,7 +34,8 @@ Each container gets:
 - Its own network stack
 - Its own ports
 
-👉 Containers can run applications on the same port internally without conflict.
+Containers can run applications on the same port internally without conflict.
+
 Example:
 Container 1 → 172.17.0.2:80 (Nginx)
 Container 2 → 172.17.0.3:80 (Nginx)
