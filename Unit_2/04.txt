@@ -74,3 +74,20 @@ cat /data/test.txt
 echo "Second line added" >> /data/test.txt
 cat /data/test.txt
 exit
+
+Docker container commands --->
+Container Lifecycle Management
+- Run a container (creates and starts it) 
+docker run -d -p 80:80 --name my_container nginx
+
+- Start a stopped container 
+docker start <container_id/name>
+
+- Stop a running container 
+docker stop <container_id/name>
+
+- Restart a container 
+docker restart <container_id/name>
+
+- Pause a container 
+docker pause <container_id/name>
