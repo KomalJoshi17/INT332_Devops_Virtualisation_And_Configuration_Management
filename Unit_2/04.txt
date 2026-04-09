@@ -76,7 +76,7 @@ cat /data/test.txt
 exit
 
 Docker container commands --->
-Container Lifecycle Management
+--> 1. Container Lifecycle Management
 - Run a container (creates and starts it) 
 docker run -d -p 80:80 --name my_container nginx
 
@@ -91,3 +91,47 @@ docker restart <container_id/name>
 
 - Pause a container 
 docker pause <container_id/name>
+
+- Unpause a paused container 
+docker unpause <container_id/name>
+
+- Kill a container (force stop) 
+docker kill <container_id/name>
+
+- Remove a container 
+docker rm <container_id/name>
+
+- Remove all stopped containers 
+docker container prune
+
+--> 2. Listing and Inspecting Containers
+- List all running containers 
+docker ps
+
+- List all containers (including stopped ones) 
+docker ps -a
+
+- Show detailed info about a container 
+docker inspect <container_id/name>
+
+- Display resource usage stats of a container 
+docker stats <container_id/name>
+
+- View container logs 
+docker logs <container_id/name>
+
+- Follow logs in real-time 
+docker logs -f <container_id/name>
+
+--> 3. Container Interaction with Host
+- Execute a command inside a running container 
+docker exec -it <container_id/name> <command>
+
+- Attach to a running container's interactive shell 
+docker attach <container_id/name>
+
+- Copy files between container and host 
+    From container to host: 
+        docker cp <container_id>:<container_path> <host_path>
+    From host to container: 
+        docker cp <host_path> <container_id>:<container_path>
