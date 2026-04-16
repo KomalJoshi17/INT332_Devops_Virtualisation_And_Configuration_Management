@@ -5,7 +5,7 @@ Process Isolation ->
 What are Namespaces?
 Namespaces are Linux kernel features that partition system resources, so that processes can only see what belongs to them.
 
-👉 In simple words ->
+In simple words ->
 “Namespaces create the illusion of a separate system for each container.”
 
 Types of Namespaces
