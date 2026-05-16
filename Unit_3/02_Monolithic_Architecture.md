@@ -1,3 +1,4 @@
+
 # Monolithic Applications
 
 ![Architecture](https://img.shields.io/badge/Architecture-Monolithic-blue)
