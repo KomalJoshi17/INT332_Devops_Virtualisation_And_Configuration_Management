@@ -1,6 +1,7 @@
 # 🚀 INT332: DEVOPS VIRTUALIZATION AND CONFIGURATION MANAGEMENT
 
 <div align="center">
+
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="80" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="80" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="80" />
