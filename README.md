@@ -4,7 +4,6 @@
 
 
 
-
 # 🚀 INT332: DEVOPS VIRTUALIZATION AND CONFIGURATION MANAGEMENT
 
 <div align="center">
